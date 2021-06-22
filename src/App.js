@@ -49,6 +49,7 @@ let showData = list.map(city=>{
                     </svg> */}
                     <div className="weather-icon"><img src={`https://openweathermap.org/img/w/${weather.icon}.png`}/></div>
                   </div>
+                  <h3>{weather.main}</h3>
                   <p>{weather.description}</p>
                 </div>
               </>)
