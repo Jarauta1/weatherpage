@@ -8,7 +8,7 @@ function App() {
   let [message, setMessage] = useState([])
   
   useEffect(function(){
-    fetch("http://localhost:3001/weather").then((res)=>res.json()).then((server)=>{
+    fetch("https://weather-page-server.herokuapp.com/weather").then((res)=>res.json()).then((server)=>{
    
       setList(server.data.list)
       setCode(server.data.cod)
@@ -29,10 +29,9 @@ let showData = list.map(city=>{
           </div>
         </div>
         <div className="card__options">
-          <div className="card__options-cell active-option" >
+          <div className="card__options-cell" >
             <h3>Weather</h3>
           </div>
-          
         </div>
       </div>
       <div className="card__bottom">
@@ -56,7 +55,7 @@ let showData = list.map(city=>{
           </div>
           <div className="weather-panel__cell">
             <p className="round">Wind speed <span className="weather-icon material-icons">air</span></p>
-            <p>{city.wind.speed} km/h - {city.wind.deg} &deg;</p>
+            <p>{city.wind.speed} km/h</p>
           </div>
           <div className="weather-panel__cell">
             <p className="round">Wind deg <span className="weather-icon material-icons">explore</span></p>
@@ -78,11 +77,16 @@ let showData = list.map(city=>{
             <p className="round">Max ºC <span className="weather-icon material-icons">local_fire_department</span></p>
             <p>{(city.main.temp_max-273.15).toFixed(1)} &deg;</p>
           </div>
-          <div className="card__options-cell" >
-            <h3>Ubication</h3>
-          </div>
-          <iframe src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18063.645919365044!2d${city.coord.lon}!3d${city.coord.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUwJzI5LjAiTiAywrAyNyc0Ni40Ilc!5e0!3m2!1ses!2ses!4v1624316625877!5m2!1ses!2ses`} width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
         </div>       
+      </div>
+      <div className="card__options">
+          <div className="card__options-cell" >
+            <h3>UBICATION</h3>
+          </div>
+      </div>
+      
+      <div className="card__bottom">
+          <iframe src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18063.645919365044!2d${city.coord.lon}!3d${city.coord.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUwJzI5LjAiTiAywrAyNyc0Ni40Ilc!5e0!3m2!1ses!2ses!4v1624316625877!5m2!1ses!2ses`} className="map" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </>)
