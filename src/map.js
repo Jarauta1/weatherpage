@@ -1,7 +1,9 @@
 import {Component} from "react";
 import GoogleMapReact from "google-map-react";
 
-const Map = ({ text }) => <div>{text}</div>;
+import "./labelMap.css";
+
+const Map = ({ text }) => <div><label className="label-map">{text}</label></div>;
 
 class CityMap extends Component {
     static defaultProps = {
@@ -24,7 +26,7 @@ class CityMap extends Component {
               <Map
                 lat={this.props.lat}
                 lng={this.props.long}
-                text={this.props.temp}
+                text={"Temp:"+this.props.temp+"ºC"}
               />
             </GoogleMapReact>
           </div>
