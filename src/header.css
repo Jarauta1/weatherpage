@@ -24,11 +24,19 @@
 	padding: 5px 5px;
 	color: white;
 	text-decoration: none;
-    cursor: pointer;
-    margin-left: 20px;
 }
   
-.header-section .menu-header {
+.header-section .logo-name {
+	font-family: "Google Sans Regular";
+	font-weight: bold;
+	padding: 0 10px;
+	letter-spacing: 3px;
+	color: #4471d3;
+}
+  
+/* menu */
+   
+.header-section .menu-header { 
 	/* margin-top: 10px; */
 	justify-items: space-around;
 	clear: both;
@@ -40,6 +48,45 @@
 .header-section .menu-header .header-user {
 	display: flex;
 	justify-content: center;
+}
+
+/* menu icon */
+  
+.header-section .menu-header-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+}
+  
+.header-section .menu-header-icon .navicon {
+	background: white;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background 0.2s ease-out;
+	width: 18px;
+}
+  
+.header-section .menu-header-icon .navicon:before,
+.header-section .menu-header-icon .navicon:after {
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	width: 100%;
+}
+  
+.header-section .menu-header-icon .navicon:before {
+	top: 5px;
+}
+  
+.header-section .menu-header-icon .navicon:after {
+	top: -5px;
 }
   
 /* menu btn */
@@ -96,15 +143,7 @@
   }
   
   @media (max-width: 932px) {
-	.header-section .logo {
-	  display: block;
-	  float: left;
-	  font-size: 1.25em;
-	  text-decoration: none;
-	  margin-top: 15px;
-	  line-height: normal;
-	}
-	
+		
 	.header-section {
 	  padding-top: 10px;
 	  text-align: center;

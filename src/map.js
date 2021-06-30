@@ -8,10 +8,10 @@ const Map = ({ text }) => <div><label className="label-map">{text}</label></div>
 class CityMap extends Component {
     static defaultProps = {
         center: {
-          lat: 37.8833,
-          lng: -4.4629
+          lat: this.props.lat,
+          lng: this.props.long
         },
-        zoom: 7
+        zoom: 10
       };
 
       render() {
