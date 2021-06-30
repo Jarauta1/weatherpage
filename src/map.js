@@ -17,7 +17,7 @@ class CityMap extends Component {
           // Important! Always set the container height explicitly
           <div style={{ height: '100vh', width: '100%' }}>
             <GoogleMapReact
-              //bootstrapURLKeys={{key: "AIzaSyCaNMzbWsUNOaq7ijNq9mhJ_LE9YosCkK0"}}
+              //bootstrapURLKeys={{key: ""}}
               defaultCenter={this.props.center}
               defaultZoom={this.props.zoom}
             >
