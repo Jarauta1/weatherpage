@@ -2,6 +2,8 @@ import './App.css';
 import {useState,useEffect} from "react"
 import "./header.css"
 import { Link } from "react-router-dom";
+import CityMap from './map';
+import GeneralMap from './generalMap';
 
 function App() {
 
@@ -12,6 +14,7 @@ function App() {
   let [message, setMessage] = useState([])
   let [ciudad, setCiudad] = useState("almeria")
   let [average, setAverage] = useState(0)
+  let [andalucia, setAndalucia] = useState([])
 
   /* Get data from api */
   
@@ -27,6 +30,7 @@ function App() {
     fetch(`https://weather-page-server.herokuapp.com/weather/average`).then((res)=>res.json()).then((server)=>{
    
          setAverage(server.average)
+         setAndalucia(server.cityInfo)
 
     })
 
@@ -129,8 +133,20 @@ let showData = list.map(city=>{
       </div>
       {/* Google Map with coordinates given by the API */}
       <div className="card__bottom">
-        <iframe src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18063.645919365044!2d${city.coord.lon}!3d${city.coord.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUwJzI5LjAiTiAywrAyNyc0Ni40Ilc!5e0!3m2!1ses!2ses!4v1624316625877!5m2!1ses!2ses`} className="map" allowFullScreen="" loading="lazy"></iframe>
+        {/* <iframe src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18063.645919365044!2d${city.coord.lon}!3d${city.coord.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUwJzI5LjAiTiAywrAyNyc0Ni40Ilc!5e0!3m2!1ses!2ses!4v1624316625877!5m2!1ses!2ses`} className="map" allowFullScreen="" loading="lazy"></iframe> */}
+            <CityMap lat={city.coord.lat} long={city.coord.lon} temp={(city.main.temp-273.15).toFixed(1)} />
       </div>
+      <div className="card__options">
+          <div className="card__options-cell" >
+            <h3>ALL CITIES</h3>
+          </div>
+      </div>
+      {/* Google Map with coordinates given by the API */}
+      <div className="card__bottom">
+        {/* <iframe src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18063.645919365044!2d${city.coord.lon}!3d${city.coord.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUwJzI5LjAiTiAywrAyNyc0Ni40Ilc!5e0!3m2!1ses!2ses!4v1624316625877!5m2!1ses!2ses`} className="map" allowFullScreen="" loading="lazy"></iframe> */}
+            <GeneralMap cityInfo= {andalucia} />
+      </div>
+      
     </div>
   </>)
 })
