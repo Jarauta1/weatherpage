@@ -24,7 +24,7 @@
   background: #f9db62;
   border-radius: 360px;
   opacity: 1;
-  animation: sun 1s 0s linear infinite;
+  animation: sun 2s 0s linear infinite;
 }
 
 .cloud{
@@ -33,15 +33,15 @@
   left: 8px;
   z-index: 2;
   opacity: 0;
-  animation: cloud 1s 0s linear infinite;
+  animation: cloud 2s 0s linear infinite;
 }
 
 .cloud .cloud1:not(.c_shadow) ul li{
-  animation: cloudi 1s 0.1s linear infinite;
+  animation: cloudi 2s 0.2s linear infinite;
 }
 
 .cloud .cloud1:not(.c_shadow):before{
-  animation: cloudi 1s 0s linear infinite;
+  animation: cloudi 2s 0s linear infinite;
 }
 
 .cloud_s{
@@ -51,7 +51,7 @@
   transform: scale(0.7,0.7) matrix(-1, 0, 0, 1, 0, 0);
   z-index: 1;
   opacity: 0;
-  animation: cloud_s 1s 0s linear infinite;
+  animation: cloud_s 2s 0s linear infinite;
 }
 
 .cloud_s .c_shadow{
@@ -65,7 +65,7 @@
   transform: scale(0.5,0.5);
   z-index: 0;
   opacity: 0;
-  animation: cloud_vs 1s 0s linear infinite;
+  animation: cloud_vs 2s 0s linear infinite;
 }
 
 .c_shadow{
@@ -194,7 +194,7 @@
   height: 45px;
   z-index: 6;
   opacity: 0;
-  animation: haze 1s 0s linear infinite;
+  animation: haze 2s 0s linear infinite;
 }
 
 .haze_stripe{
@@ -207,16 +207,16 @@
   z-index: 17;
   opacity: 0;
   border-radius: 360px;
-  animation: haze_stripe 1s 0.1s linear infinite;
+  animation: haze_stripe 2s 0.2s linear infinite;
 }
 
 .haze_stripe:nth-child(6){
   bottom: 55px;
-  animation: haze_stripe 1s 0.2s linear infinite;
+  animation: haze_stripe 2s 0.2s linear infinite;
 }
 .haze_stripe:last-child{
   bottom: 35px;
-  animation: haze_stripe 1s 0.4s linear infinite;
+  animation: haze_stripe 2s 0.4s linear infinite;
 }
 
 .thunder{
@@ -228,7 +228,7 @@
   background: #f9db62;
   transform: skew(-25deg);
   opacity: 0;
-  animation: thunder 1s 0s linear infinite;
+  animation: thunder 2s 0s linear infinite;
 }
 
 .thunder:before{
@@ -282,15 +282,15 @@
 }
 
 .rain ul li:first-child{
-  animation: raini 1s 0s linear infinite;
+  animation: raini 2s 0s linear infinite;
 }
 
 .rain ul li:nth-child(2){
-  animation: rainii 1s 0.2s linear infinite;
+  animation: rainii 2s 0.2s linear infinite;
 }
 
 .rain ul li:last-child{
-  animation: rainiii 1s 0.4s linear infinite;
+  animation: rainiii 2s 0.4s linear infinite;
 }
 
 .sleet{
@@ -320,15 +320,15 @@
 }
 
 .sleet ul li:first-child{
-  animation: raini 1s 1.0s linear infinite;
+  animation: raini 2s 1.0s linear infinite;
 }
 
 .sleet ul li:nth-child(2){
-  animation: rainii 1s 1.4s linear infinite;
+  animation: rainii 2s 1.4s linear infinite;
 }
 
 .sleet ul li:last-child{
-  animation: rainiii 1s 1.6s linear infinite;
+  animation: rainiii 2s 1.6s linear infinite;
 }
 
 @keyframes sun{
