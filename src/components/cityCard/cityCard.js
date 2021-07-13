@@ -68,15 +68,14 @@ function CityCard(props) {
         </div>       
       </div>
       <div className="card__options">
-          <div className="card__options-cell" >
-            <h3>Average Community<span className="material-icons">thermostat</span></h3>
-          </div>
+        <div className="card__options-cell" >
+          <h3>Average Community<span className="material-icons">thermostat</span></h3>
         </div>
+      </div>
       <div className="card__bottom">
         <div className="panel weather-panel">
           <div className="weather-panel__cell weather-panel__cell--main">
             <div className="temp_date">
-              
               <h2>{props.average}<span>&deg;</span></h2>
             </div>
           </div>
@@ -91,7 +90,6 @@ function CityCard(props) {
             <CityMap lat={city.coord.lat} long={city.coord.lon} temp={(city.main.temp-273.15).toFixed(1)} />
           </div>
         </div>
-      
         <div className="card__options-mapSpain">
           <div className="card__map">
             <div className="card__options-cell allCities" >

@@ -2,7 +2,7 @@
     box-shadow: inset -3.5em 0 0 0 #ffdc7f, inset 3.5em 0 0 0 #ffdc7f;
       border-color: #ffdc7f;
       color: #fff;
- }
+}
 
 .label-map{
      color: #ff7f82;
@@ -13,4 +13,4 @@
       line-height: 1;
       margin-left: 10px;
       padding: 5px;
- }
+}
