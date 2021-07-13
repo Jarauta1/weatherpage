@@ -32,7 +32,7 @@ function CityCard(props) {
                 <div className="icon_details">
                   <div className="icon">
                     <div className="weather-icon">
-                      <img src={`https://openweathermap.org/img/w/${weather.icon}.png`}/>
+                      <img src={`https://openweathermap.org/img/w/${weather.icon}.png`} alt=""/>
                     </div>
                   </div>
                   <h3>{weather.main}</h3>

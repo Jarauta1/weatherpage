@@ -12,28 +12,28 @@ function Header(props) {
             </label>
             <ul className="menu-header">
                 <li>
-                    <div onClick={()=>props.handleOnClick("almeria")}><a>Almeria</a></div>
+                    <div onClick={()=>props.handleOnClick("almeria")}><p>Almeria</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("granada")}><a>Granada</a></div>
+                    <div onClick={()=>props.handleOnClick("granada")}><p>Granada</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("malaga")}><a>Málaga</a></div>
+                    <div onClick={()=>props.handleOnClick("malaga")}><p>Málaga</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("jaen")}><a>Jaen</a></div>
+                    <div onClick={()=>props.handleOnClick("jaen")}><p>Jaen</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("cordoba")}><a>Córdoba</a></div>
+                    <div onClick={()=>props.handleOnClick("cordoba")}><p>Córdoba</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("sevilla")}><a>Sevilla</a></div>
+                    <div onClick={()=>props.handleOnClick("sevilla")}><p>Sevilla</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("huelva")}><a>Huelva</a></div>
+                    <div onClick={()=>props.handleOnClick("huelva")}><p>Huelva</p></div>
                 </li>
                 <li>
-                    <div onClick={()=>props.handleOnClick("cadiz")}><a>Cádiz</a></div>
+                    <div onClick={()=>props.handleOnClick("cadiz")}><p>Cádiz</p></div>
                 </li>           
             </ul>
         </section>
