@@ -1,7 +1,7 @@
 import {Component} from "react";
 import GoogleMapReact from "google-map-react";
 
-import "./labelMap.css";
+import "./cityMap.css";
 
 const Map = ({ text }) => <div><label className="label-map">{text}</label></div>;
 
