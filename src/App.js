@@ -1,7 +1,9 @@
 import './App.css';
 import {useState,useEffect} from "react"
-import "./header.css"
+
 import { Link } from "react-router-dom";
+
+import Header from './components/header/header';
 import CityMap from './map';
 import GeneralMap from './generalMap';
 
@@ -12,6 +14,7 @@ function App() {
   let [list, setList] = useState([])
   let [code, setCode] = useState([])
   let [message, setMessage] = useState([])
+  let [cityName, setCityName] = useState("")
   let [ciudad, setCiudad] = useState("almeria")
   let [average, setAverage] = useState(0)
   let [andalucia, setAndalucia] = useState([])
@@ -26,40 +29,23 @@ function App() {
       setMessage(server.data.message)    
 
     })
+    
+  },[ciudad])
+  
+useEffect(function(){
 
-    fetch(`https://weather-page-server.herokuapp.com/weather/average`).then((res)=>res.json()).then((server)=>{
-   
-         setAverage(server.average)
-         setAndalucia(server.cityInfo)
+  fetch(`https://weather-page-server.herokuapp.com/weather/average`).then((res)=>res.json()).then((server)=>{
+ 
+       setAverage(server.average)
+       setAndalucia(server.cityInfo)
 
-    })
+  })
 
+},[])
 
-},[ciudad])
-
-function almeria() {
-  setCiudad("almeria")
-}
-function cadiz() {
-  setCiudad("cadiz")
-}
-function cordoba() {
-  setCiudad("cordoba")
-}
-function granada() {
-  setCiudad("granada")
-}
-function huelva() {
-  setCiudad("huelva")
-}
-function jaen() {
-  setCiudad("jaen")
-}
-function malaga() {
-  setCiudad("malaga")
-}
-function sevilla() {
-  setCiudad("sevilla")
+const handleOnClick = (cityName) => {
+  console.log(cityName)
+  /* setCiudad(cityName) */
 }
 
 let showData = list.map(city=>{
@@ -150,40 +136,7 @@ let showData = list.map(city=>{
  
 if (code === "200") {
   return (<>
-  <section className="header-section">
-               
-                <input className="menu-header-btn" type="checkbox" id="menu-header-btn"/>
-                <label className="menu-header-icon" htmlFor="menu-header-btn">
-                    <span className="navicon"></span>
-                </label>
-                <ul className="menu-header">
-                    <li>
-                        <div onClick={almeria} className="header-camisetas" to="/camisetas"><a>Almeria</a></div>
-                    </li>
-                    <li>
-                        <div onClick={cadiz} className="header-comics" to="/comics"><a>Cadiz</a></div>
-                    </li>
-                    <li>
-                        <div onClick={cordoba} className="header-libros" to="/libros"><a>Cordoba</a></div>
-                    </li>
-                    <li>
-                        <div onClick={granada} className="header-peliculas" to="/peliculas"><a>Granada</a></div>
-                    </li>
-                    <li>
-                        <div onClick={huelva} className="header-zapatillas" to="/zapatillas"><a>Huelva</a></div>
-                    </li>
-                    <li>
-                        <div onClick={jaen} className="header-zapatillas" to="/zapatillas"><a>Jaen</a></div>
-                    </li>
-                    <li>
-                        <div onClick={malaga} className="header-zapatillas" to="/zapatillas"><a>Malaga</a></div>
-                    </li>
-                    <li>
-                        <div onClick={sevilla} className="header-zapatillas" to="/zapatillas"><a>Sevilla</a></div>
-                    </li>
-                   
-                </ul>
-            </section>
+    <Header handleOnClick={handleOnClick}/>
     {showData}
   </>);
 } else {

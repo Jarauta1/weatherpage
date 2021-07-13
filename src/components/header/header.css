@@ -2,8 +2,8 @@
 
 .header-section {
 	box-sizing: border-box;
-	background-color: #00baf0;
-	background: linear-gradient(to left, #4582f4, #49bfee);
+	/* background-color: #e0115f; */
+	background: linear-gradient(to left, #e0115f, #d86b95);
 	color: #fff;
 	display: block;
 	max-width: 100vw;
@@ -24,6 +24,17 @@
 	padding: 5px 5px;
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
+	padding-right: 20px;
+}
+  
+.header-section .logo {
+	display: block;
+	float: left;
+	font-size: 1.5em;
+	text-decoration: none;
+	margin-top: -12px;
+	line-height: normal;
 }
   
 .header-section .logo-name {
@@ -35,9 +46,8 @@
 }
   
 /* menu */
-   
-.header-section .menu-header { 
-	/* margin-top: 10px; */
+  
+.header-section .menu-header {
 	justify-items: space-around;
 	clear: both;
 	max-height: 0;
@@ -56,7 +66,7 @@
 	cursor: pointer;
 	display: inline-block;
 	float: right;
-	padding: 28px 20px;
+	padding: 20px;
 	position: relative;
 	user-select: none;
 }
@@ -116,16 +126,12 @@
 	top: 0;
 }
   
-/* 48em = 768px */
+/* 48em = 932px */
   
 @media (min-width: 932px) {
 	.header-section li {
 	  float: left;
 	}
-
-	/* .header-section .material-icons {
-		float: none;
-	} */
 
 	.header-section {
 	  display: flex;
@@ -143,7 +149,15 @@
   }
   
   @media (max-width: 932px) {
-		
+	.header-section .logo {
+	  display: block;
+	  float: left;
+	  font-size: 1.25em;
+	  text-decoration: none;
+	  margin-top: 15px;
+	  line-height: normal;
+	}
+	
 	.header-section {
 	  padding-top: 10px;
 	  text-align: center;
