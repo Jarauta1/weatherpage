@@ -69,7 +69,7 @@ function CityCard(props) {
       </div>
       <div className="card__options">
           <div className="card__options-cell" >
-            <h3>Average Community</h3>
+            <h3>Average Community<span className="material-icons">thermostat</span></h3>
           </div>
         </div>
       <div className="card__bottom">
