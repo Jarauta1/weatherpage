@@ -42,10 +42,6 @@ function CityCard(props) {
             })}
           </div>
           <div className="weather-panel__cell">
-            <p className="round">Average <span className="weather-icon material-icons">thermostat</span></p>
-            <p>{props.average} &deg;</p>
-          </div>
-          <div className="weather-panel__cell">
             <p className="round">Wind speed <span className="weather-icon material-icons">air</span></p>
             <p>{city.wind.speed} km/h</p>
           </div>
@@ -68,6 +64,21 @@ function CityCard(props) {
           <div className="weather-panel__cell">
             <p className="round">Max ºC <span className="weather-icon material-icons">local_fire_department</span></p>
             <p>{(city.main.temp_max-273.15).toFixed(1)} &deg;</p>
+          </div>
+        </div>       
+      </div>
+      <div className="card__options">
+          <div className="card__options-cell" >
+            <h3>Average Community</h3>
+          </div>
+        </div>
+      <div className="card__bottom">
+        <div className="panel weather-panel">
+          <div className="weather-panel__cell weather-panel__cell--main">
+            <div className="temp_date">
+              
+              <h2>{props.average}<span>&deg;</span></h2>
+            </div>
           </div>
         </div>       
       </div>
