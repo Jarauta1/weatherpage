@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weatherpage/static/css/main.b1c1328a.chunk.css",
+    "main.css": "/weatherpage/static/css/main.5d32921a.chunk.css",
     "main.js": "/weatherpage/static/js/main.6916dab9.chunk.js",
     "main.js.map": "/weatherpage/static/js/main.6916dab9.chunk.js.map",
     "runtime-main.js": "/weatherpage/static/js/runtime-main.b9a1e0dd.js",
@@ -10,14 +10,14 @@
     "static/js/3.5a39fe9e.chunk.js": "/weatherpage/static/js/3.5a39fe9e.chunk.js",
     "static/js/3.5a39fe9e.chunk.js.map": "/weatherpage/static/js/3.5a39fe9e.chunk.js.map",
     "index.html": "/weatherpage/index.html",
-    "static/css/main.b1c1328a.chunk.css.map": "/weatherpage/static/css/main.b1c1328a.chunk.css.map",
+    "static/css/main.5d32921a.chunk.css.map": "/weatherpage/static/css/main.5d32921a.chunk.css.map",
     "static/js/2.b89f3339.chunk.js.LICENSE.txt": "/weatherpage/static/js/2.b89f3339.chunk.js.LICENSE.txt",
     "static/media/logo_influencity.b6d522ea.png": "/weatherpage/static/media/logo_influencity.b6d522ea.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b9a1e0dd.js",
     "static/js/2.b89f3339.chunk.js",
-    "static/css/main.b1c1328a.chunk.css",
+    "static/css/main.5d32921a.chunk.css",
     "static/js/main.6916dab9.chunk.js"
   ]
 }
