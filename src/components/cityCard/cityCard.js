@@ -71,22 +71,24 @@ function CityCard(props) {
           </div>
         </div>       
       </div>
-      <div className="card__options">
-        <div className="card__options-cell" >
-          <h3>UBICATION</h3>
+      <div className="card__options-map">
+        <div className="card__options-mapCity">
+          <div className="card__map">
+            <div className="card__options-cell ubication" >
+              <h3>UBICATION</h3>
+            </div>
+            <CityMap lat={city.coord.lat} long={city.coord.lon} temp={(city.main.temp-273.15).toFixed(1)} />
+          </div>
         </div>
-      </div>
-      {/* Google Map with coordinates given by the API */}
-      <div className="card__bottom">
-        <CityMap lat={city.coord.lat} long={city.coord.lon} temp={(city.main.temp-273.15).toFixed(1)} />
-      </div>
-      <div className="card__options">
-        <div className="card__options-cell" >
-          <h3>ALL CITIES</h3>
-        </div>
-      </div>
-      <div className="card__bottom">
-        <GeneralMap cityInfo= {props.andalucia} />
+      
+        <div className="card__options-mapSpain">
+          <div className="card__map">
+            <div className="card__options-cell allCities" >
+              <h3>ALL CITIES</h3>
+            </div> 
+            <GeneralMap cityInfo= {props.andalucia} />
+          </div>
+        </div> 
       </div> 
     </>)
   })

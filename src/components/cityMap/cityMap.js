@@ -6,32 +6,16 @@ import "./cityMap.css";
 const Map = ({ text }) => <div><label className="label-map">{text}</label></div>;
 
 class CityMap extends Component {
-    static defaultProps = {
-        center: {
-          lat: 37.8833,
-          lng: -4.4629
-        },
-        zoom: 8
-      };
-
-      render() {
-        return (
-          // Important! Always set the container height explicitly
-          <div style={{ height: '100vh', width: '100%' }}>
-            <GoogleMapReact
-              //bootstrapURLKeys={{key: ""}}
-              defaultCenter={this.props.center}
-              defaultZoom={this.props.zoom}
-            >
-              <Map
-                lat={this.props.lat}
-                lng={this.props.long}
-                text={"Temp:"+this.props.temp+"ºC"}
-              />
-            </GoogleMapReact>
-          </div>
-        );
-      }
+   
+  render() {
+    return (
+      <div style={{ height: '100%', width: '100%' }}>
+        <GoogleMapReact defaultCenter={{lat: this.props.lat, lng: this.props.long}} defaultZoom={7}>
+          <Map lat={this.props.lat} lng={this.props.long} text={"Temp:"+this.props.temp+"ºC"}/>
+        </GoogleMapReact>
+      </div>
+    );
+  }
 }
 
 export default CityMap;
