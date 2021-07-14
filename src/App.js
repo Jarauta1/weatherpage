@@ -17,26 +17,42 @@ function App() {
   let [average, setAverage] = useState(0)
   let [andalucia, setAndalucia] = useState([])
 
+  let [allData, setAllData] = useState([])
+
   /* Get data from api */
   
-  useEffect(function(){
-    fetch(`https://weather-page-server.herokuapp.com/weather/${cityName}`).then((res)=>res.json()).then((server)=>{
+  /* Individual routes */
+
+/*   useEffect(function(){
+    fetch(`http://localhost:3001/weather/${cityName}`).then((res)=>res.json()).then((server)=>{
       setList(server.data.list)
       setCode(server.data.cod)
       setMessage(server.data.message)
       setLoader(true)  
     })
-  },[cityName])
+  },[cityName]) 
+
+  const handleOnClick = (cityName) => {
+    setCityName(cityName)
+  } */
+
+  /* All info */
   
   useEffect(function(){
-    fetch(`https://weather-page-server.herokuapp.com/weather/average`).then((res)=>res.json()).then((server)=>{
+    fetch(`http://localhost:3001/weather/`).then((res)=>res.json()).then((server)=>{
       setAverage(server.average)
-      setAndalucia(server.cityInfo)
+      setAndalucia(server.generalMap)
+
+      setAllData(server.data)
+      setList(server.data[cityName].list[0])
+      setCode(server.data[cityName].cod)
+      setLoader(true)
     })
   },[])
 
   const handleOnClick = (cityName) => {
     setCityName(cityName)
+    setList(allData[cityName].list[0])
   }
 
   if (loader) {

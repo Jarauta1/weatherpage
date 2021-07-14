@@ -10,8 +10,8 @@ class CityMap extends Component {
   render() {
     return (
       <div style={{ height: '100%', width: '100%' }}>
-        <GoogleMapReact defaultCenter={{lat: this.props.lat, lng: this.props.long}} defaultZoom={7}>
-          <Map lat={this.props.lat} lng={this.props.long} text={"Temp:"+this.props.temp+"ºC"}/>
+        <GoogleMapReact center={{lat: this.props.lat, lng: this.props.long}} defaultZoom={7}>
+          <Map center={{lat: this.props.lat, lng: this.props.long}} zoom={7} lat={this.props.lat} lng={this.props.long} text={"Temp:"+this.props.temp+"ºC"}/>
         </GoogleMapReact>
       </div>
     );
