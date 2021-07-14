@@ -24,7 +24,7 @@ function App() {
   /* Individual routes */
 
 /*   useEffect(function(){
-    fetch(`http://localhost:3001/weather/${cityName}`).then((res)=>res.json()).then((server)=>{
+    fetch(`https://weather-page-server.herokuapp.com/weather/${cityName}`).then((res)=>res.json()).then((server)=>{
       setList(server.data.list)
       setCode(server.data.cod)
       setMessage(server.data.message)
@@ -39,7 +39,7 @@ function App() {
   /* All info */
   
   useEffect(function(){
-    fetch(`http://localhost:3001/weather/`).then((res)=>res.json()).then((server)=>{
+    fetch(`https://weather-page-server.herokuapp.com/weather/`).then((res)=>res.json()).then((server)=>{
       setAverage(server.average)
       setAndalucia(server.generalMap)
 
